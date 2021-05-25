@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body style="background-color: blanchedalmond;">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title"><i>Demographic Info</i></h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <p><strong>This Dashboard holds data for of demographic and bacterial information for Roza's volunteers. The Dashboard features three different graphs to visualize the data from the JSON file. Navigating the Dashboard for volunteers should be easy enough due to the template. When the study finds what proteins are relevant, it should make it easy to find which volunteer has said protein in their navel.</strong></p>
+      <div class="col-md-5">
+        <div id="bar"></div>
+        <p> This is the Bar Graph that showcases the Top 10 Bacterial Cultures found from the samples.</p>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+      <p>This is the Gauge Chart that shows the weekly washing frequency's value </p>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+        <p> This is the Bubble Chart that that further expands on the Bacterial Cultures found from the samples.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="charts.js"></script>
+
+</body>
+
+</html>
